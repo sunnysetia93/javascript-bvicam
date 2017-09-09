@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>JS intro</title>
+    </head>
+    <body>
+        <form action="#">
+            <input type="text" id="inp">
+            <button type="submit" id="btn">Submit</button>    
+        </form>
+
+        
+    </body>
+    <script type="text/javascript">
+        
+        var but = document.getElementById("btn");
+        but.onclick = function()
+        {
+            var inp = document.getElementById("inp").value;
+            window.alert(inp);
+        }
+    </script>
+
+</html>

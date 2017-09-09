@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <title> FizzBuzz </title>
+    </head>
+    <body>
+        <input type="text" id="max">
+        <button type="submit" id="fizzbuzz">Submit</button>
+        <ul id="list">
+            
+        </ul>
+    </body>
+    <script type="text/javascript">
+        
+        var max = document.getElementById('max');
+        var btn = document.getElementById('fizzbuzz');
+        var list = document.getElementById('list');
+        
+    btn.onclick = function()
+    {
+        var n = parseInt(max.value);
+        var startTime = (new Date()).getTime();
+
+        var result = '';
+        var totalresult = "";
+        console.log(n); 
+
+        for(i=1;i<=n;i++)
+        {
+            result = ''
+            if(i%3==0)
+                result+='fizz'
+            if(i%5==0)
+                result+='buzz'
+            if(result=='')
+                result = i;
+            
+            totalresult += "<li>" + result + "</li>";
+                
+        }
+
+        list.innerHTML = totalresult;
+
+        console.log(((new Date()).getTime()) - startTime);
+    }
+    </script>
+</html>
